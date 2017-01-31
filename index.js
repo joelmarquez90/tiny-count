@@ -3,6 +3,7 @@ var tinify = require('tinify');
 var path = require('path');
 var fs = require('fs');
 var program = require('commander');
+var filesize = require('filesize');
 
 // Arguments
 program
@@ -38,7 +39,7 @@ recursive(rootPath, function (err, files) {
   });
 
   var filesSize = getFilesSize(imageFiles);
-  console.log('Files size before Tinify proccessing: ' + filesSize + ' KB');
+  console.log('Files size before Tinify proccessing: ' + filesize(filesSize));
 
   var imagesProcessed = 0;
   imageFiles.forEach(function (file) {
@@ -49,7 +50,7 @@ recursive(rootPath, function (err, files) {
         imagesProcessed++;
         if (imagesProcessed === imageFiles.length) {
           var filesSize = getFilesSize(imageFiles);
-          console.log('Files size after Tinify proccessing: ' + filesSize + ' KB');
+          console.log('Files size after Tinify proccessing: ' + filesize(filesSize));
         }
       }
     });
