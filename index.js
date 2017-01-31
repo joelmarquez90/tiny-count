@@ -37,12 +37,26 @@ recursive(rootPath, function (err, files) {
     return imageExtensions.indexOf(fileExtension) > -1;
   });
 
-  var filesSize = imageFiles.map(function (file) { return fs.statSync(file).size / 1000; })
-                            .reduce(function (size, total) { return size + total; }, 0);
-
+  var filesSize = getFilesSize(imageFiles);
   console.log('Files size before Tinify proccessing: ' + filesSize + ' KB');
 
+  var imagesProcessed = 0;
   imageFiles.forEach(function (file) {
-    tinify.fromFile(file).toFile(file);
+    tinify.fromFile(file).toFile(file, function(err) {
+      if (err) {
+        console.log('Error on file: ' + file);
+      } else {
+        imagesProcessed++;
+        if (imagesProcessed === imageFiles.length) {
+          var filesSize = getFilesSize(imageFiles);
+          console.log('Files size after Tinify proccessing: ' + filesSize + ' KB');
+        }
+      }
+    });
   });
 });
+
+var getFilesSize = function(files) {
+  return files.map(function (file) { return fs.statSync(file).size / 1000; })
+              .reduce(function (size, total) { return size + total; }, 0);
+};
