@@ -2,12 +2,11 @@
   "name": "tiny-count",
   "version": "0.0.1",
   "description": "A node module that iterates recursively through a directory and compresses all the images with TinyPNG",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "author": "Joel Márquez",
   "license": "MIT",
   "preferGlobal": true,
   "bin": "bin/tiny-count",
-  "main": "./lib/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/joelmarquez90/tiny-count.git"
@@ -23,6 +22,8 @@
   "dependencies": {
     "commander": "^2.9.0",
     "filesize": "^3.5.4",
+    "fs": "0.0.1-security",
+    "path": "^0.12.7",
     "recursive-readdir": "^2.1.0",
     "tinify": "^1.4.0"
   }
