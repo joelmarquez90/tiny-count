@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var tinycount = require('../lib/index.js');
+var program = require('commander');
+
+// Arguments
+program
+  .version('0.0.1')
+  .option('-k, --key', 'Tinify API Key')
+  .option('-p, --path', 'Images root directory')
+  .parse(process.argv);
+
+// Checking for key
+var key = '';
+if (program.key) {
+  key = program.args[0];
+} else {
+  console.log('Tinify API Key is required');
+  process.exit(1);
+}
+
+// Checking for path
+var rootPath = '';
+if (program.path) {
+  rootPath = program.args[1];
+} else {
+  console.log('Images root directory required');
+  process.exit(1);
+}
+
+tinycount.run(key, rootPath);

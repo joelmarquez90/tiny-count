@@ -1,13 +1,25 @@
 {
-  "name": "node-tinypng",
-  "version": "1.0.0",
-  "description": "",
+  "name": "tiny-count",
+  "version": "0.0.1",
+  "description": "A node module that iterates recursively through a directory and compresses all the images with TinyPNG",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "author": "Joel Márquez",
+  "license": "MIT",
+  "preferGlobal": true,
+  "bin": "bin/tiny-count",
+  "main": "./lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joelmarquez90/tiny-count.git"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "tinypng",
+    "count",
+    "tiny",
+    "image",
+    "images",
+    "compression"
+  ],
   "dependencies": {
     "commander": "^2.9.0",
     "filesize": "^3.5.4",
