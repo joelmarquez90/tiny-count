@@ -22,9 +22,11 @@
   "dependencies": {
     "bluebird": "^3.4.7",
     "commander": "^2.9.0",
+    "filesize": "^3.5.4",
     "fs": "0.0.1-security",
     "nodegit": "^0.16.0",
     "path": "^0.12.7",
+    "progress": "^1.1.8",
     "recursive-readdir": "^2.1.0",
     "tinify": "^1.4.0"
   }
