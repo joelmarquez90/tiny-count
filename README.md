@@ -18,12 +18,19 @@ First you have to register in [TinyPNG](tinypng.com) and get an API KEY. Then, y
 
 `tiny-count -k <TinyPNG API KEY> -p /path/to/your/root/images/directory`
 
+By default, it filters the files that aren't staged in git. If you want to force the replacement, use the `-f` or `--force` option.
+
 And you will have an output like this:
 
 ```
-Size before tinifying: 128 B
-Size after tinifying: 48 B
-Difference: 80 B
+Size in KB
+------------------
+128	Before
+------------------
+41	After
+------------------
+87	Difference
+------------------
 ```
 
 ## Author
