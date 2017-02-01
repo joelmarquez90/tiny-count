@@ -24,6 +24,7 @@
     "commander": "^2.9.0",
     "filesize": "^3.5.4",
     "fs": "0.0.1-security",
+    "loglevel": "^1.4.1",
     "nodegit": "^0.16.0",
     "path": "^0.12.7",
     "progress": "^1.1.8",
