@@ -1,6 +1,6 @@
 {
   "name": "tiny-count",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "A node module that iterates recursively through a directory and compresses all the images with TinyPNG",
   "main": "./lib/index.js",
   "author": "Joel Márquez",
