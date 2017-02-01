@@ -10,6 +10,7 @@ program
   .version('0.0.1')
   .option('-k, --key', 'Tinify API Key')
   .option('-p, --path', 'Images root directory')
+  .option('-f, --force', 'Force replace, including non-staged image files')
   .parse(process.argv);
 
 // Checking for key
@@ -30,4 +31,4 @@ if (program.path) {
   process.exit(1);
 }
 
-tinycount.run(key, rootPath);
+tinycount.run(key, rootPath, program.force);
