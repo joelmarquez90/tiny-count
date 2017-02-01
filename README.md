@@ -18,6 +18,14 @@ First you have to register in [TinyPNG](tinypng.com) and get an API KEY. Then, y
 
 `tiny-count -k <TinyPNG API KEY> -p /path/to/your/root/images/directory`
 
+And you will have an output like this:
+
+```
+Size before tinifying: 128 B
+Size after tinifying: 48 B
+Difference: 80 B
+```
+
 ## Author
 
 Joel Márquez <90joelmarquez@gmail.com> http://github.com/joelmarquez90
