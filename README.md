@@ -23,14 +23,15 @@ By default, it filters the files that aren't staged in git. If you want to force
 And you will have an output like this:
 
 ```
-Size in KB
+Replacing... [============================================================] 100% 0.0s
+
+Size
 ------------------
-128	Before
+1.74 KB	Before
 ------------------
-41	After
+667 B	After
 ------------------
-87	Difference
-------------------
+1.09 KB	Difference
 ```
 
 ## Author
