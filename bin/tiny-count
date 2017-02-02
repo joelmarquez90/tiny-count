@@ -4,10 +4,11 @@
 
 var tinycount = require('../lib/index.js');
 var program = require('commander');
+var pjson = require('../package.json');
 
 // Arguments
 program
-  .version('0.0.1')
+  .version(pjson.version)
   .option('-k, --key', 'Tinify API Key')
   .option('-p, --path', 'Images root directory')
   .option('-f, --force', 'Force replace, including non-staged image files')
