@@ -25,13 +25,11 @@ And you will have an output like this:
 ```
 Replacing... [============================================================] 100% 0.0s
 
-Size
-------------------
-1.74 KB	Before
-------------------
-667 B	After
-------------------
-1.09 KB	Difference
+Size       Description
+---------  -----------
+10.34 MB   Before     
+9.66 MB    After      
+698.16 KB  Difference 
 ```
 
 ## Author
