@@ -12,7 +12,7 @@ program
   .option('-k, --key', 'Tinify API Key')
   .option('-p, --path', 'Images root directory')
   .option('-f, --force', 'Force replace, including non-staged image files')
-  .option('--verbose', 'Verbose')
+  .option('-v, --verbose', 'Verbose')
   .parse(process.argv);
 
 // Checking for key
